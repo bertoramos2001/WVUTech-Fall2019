@@ -1,0 +1,25 @@
+/*
+ * Alberto Ramos
+ * 09/15/2019
+ * CS 121 T01
+ * Tip Calculator
+ * This program helps the user to compute a final bill in a restaurant
+ */
+
+import java.util.Scanner;
+
+public class RamosBillCalculator {
+  public static void main(String [] args) {
+    Scanner input = new Scanner(System.in);
+    
+    System.out.print("Enter subtotal: ");
+    double subtotalAmount = input.nextDouble();
+    
+    System.out.print("Enter tips rate: ");
+    double tipsAmount = input.nextDouble();
+    
+    double gratuity = (tipsAmount/100) * subtotalAmount;
+    double totalAmount = gratuity + subtotalAmount;
+    System.out.println("The gratuity is " +gratuity+ ", total is " + totalAmount);
+  }
+}

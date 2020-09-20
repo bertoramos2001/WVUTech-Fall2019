@@ -1,0 +1,28 @@
+/*
+ * Alberto Ramos
+ * 10/24/2019
+ * CS 121 Lab
+ * Address Parser
+ * 
+ * This program  reads the address of a user as a single string, extracts the main street, city, state and zipcode and prints them out
+ */
+import java.util.Scanner;
+
+public class AddressParser {
+  public static void main (String [] args) {
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("Enter your address in the following form : 123 Main Street, City, State, ZipCode");
+    String address = input.nextLine();
+    
+    String mainStreet = address.substring(0, (address.indexOf(',')));
+    String city = address.substring(address.indexOf(',')+1,address.indexOf(',',address.indexOf(',')+1));
+    String state = address.substring(address.indexOf(',',address.indexOf(',')),address.lastIndexOf(','));
+    String zipCode = address.substring(address.lastIndexOf(',')+1);                                     
+    
+    System.out.println("Main Street: " + mainStreet);
+    System.out.println("City: " + city);
+    System.out.println("State: " + state);
+    System.out.println("Zip: " + zipCode);
+  }
+}

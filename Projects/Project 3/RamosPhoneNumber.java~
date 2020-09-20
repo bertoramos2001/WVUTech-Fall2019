@@ -1,0 +1,21 @@
+/*
+ * Alberto Ramos
+ * 10/30/2019
+ * CS 121 T01
+ * Ramos Phone
+ * 
+ * This program t prompts the user to enter a phone number expressed in letters and outputs the corresponding phone number in digits
+ */
+
+import java util Scanner;
+
+public class RamosPhoneNumber {
+  public static void main (String [] args) {
+   Scanner input = new Scanner(System.in);
+   
+   System.out.println("do you want to enter a number (Y/N): ");
+   String answer = input.nextLine();
+   char charAnswer = answer.charAt(0);
+   
+  }
+}

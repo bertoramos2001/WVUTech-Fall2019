@@ -1,0 +1,41 @@
+/*
+ * Alberto Ramos
+ * 10/31/2019
+ * CS 121 Lab
+ * Population
+ * 
+ * This program prompts the user to enter the population of two towns and its rate of growth and calculates both the 
+ * amount of years that will take to the population of A to be greater than the population of B and the populations of both towns at that time
+ */
+
+import java.util.Scanner;
+
+public class Population {
+  public static void main(String [] args) {
+   Scanner input = new Scanner(System.in);
+   
+   System.out.print("Enter the current population of town A: ");
+   int popA = input.nextInt();
+   System.out.print("Enter the current population of town B: ");
+   int popB = input.nextInt();
+   
+   System.out.print("Enter the growth rate of town A: ");
+   int growthA = input.nextInt();
+   System.out.print("Enter the growth rate of town B: ");
+   int growthB = input.nextInt();
+   
+   int years = 0;
+   int popAy = 0;
+   int popBy =1;
+   while(popAy < popBy){
+    popAy = (popA + (popA * (growthA/100)));
+    popBy = (popB + (popB * (growthB/100)));
+    
+    years += 1;
+   }
+   
+     System.out.println("After " + years + " years(s) the population of town A will be greater than or equal to the population of town B");
+     System.out.println("After " + years + " years(s), population of town A is: " + popA);
+     System.out.println("After " + years + " years(s), population of town B is: " + popB);                   
+  }
+}

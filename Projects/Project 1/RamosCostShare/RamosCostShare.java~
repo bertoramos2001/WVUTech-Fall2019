@@ -1,0 +1,18 @@
+/*
+ * Alberto Ramos
+ * 09/15/2019
+ * CS 121 T01
+ * Shared car cost per student
+ * This program calculates the amount of money that each student has to pay if they split the total cost by the distance that each one does
+ */
+
+import java.util.Scanner;
+ 
+public class RamosCostShare {
+  public static void main(String [] args) {
+    Scanner input = new Scanner(System.in);
+    
+    System.out.print("Hello!");
+    System.out.print("YYY");
+  }
+}
